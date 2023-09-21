@@ -29,6 +29,62 @@
                 "safe file sharing",
                 "secure, high-speed VPN"
             ]
+        },
+        {
+            "name": "standart",
+            "prices": [
+                {
+                    "monthly": {
+                        "currency": "USD",
+                        "basePrice": 13.79,
+                        "discount": 0
+                    },
+                    "yearly": {
+                        "currency": "USD",
+                        "basePrice": 5.79,
+                        "discount": 45
+                    },
+                    "yearly2": {
+                        "currency": "USD",
+                        "basePrice": 3.99,
+                        "discount": 62
+                    }
+                }
+            ],
+            "features": [
+                "trackerAndBlocker",
+                "malware protection",
+                "dark web monitor",
+                "safe file sharing",
+                "secure, high-speed VPN"
+            ]
+        },
+        {
+            "name": "basic",
+            "prices": [
+                {
+                    "monthly": {
+                        "currency": "USD",
+                        "basePrice": 12.99,
+                        "discount": 0
+                    },
+                    "yearly": {
+                        "currency": "USD",
+                        "basePrice": 4.99,
+                        "discount": 39
+                    },
+                    "yearly2": {
+                        "currency": "USD",
+                        "basePrice": 3.19,
+                        "discount": 61
+                    }
+                }
+            ],
+            "features": [
+                "dark web monitor",
+                "safe file sharing",
+                "secure, high-speed VPN"
+            ]
         }
     ]
 }
