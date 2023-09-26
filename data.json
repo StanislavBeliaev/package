@@ -17,7 +17,8 @@
                     "yearly2": {
                         "currency": "USD",
                         "basePrice": 5.59,
-                        "discount": 68
+                        "discount": 68,
+                        "bonus": "+3 EXTRA mounths"
                     }
                 }
             ],
@@ -47,7 +48,8 @@
                     "yearly2": {
                         "currency": "USD",
                         "basePrice": 3.99,
-                        "discount": 62
+                        "discount": 62,
+                        "bonus": "+3 EXTRA mounths"
                     }
                 }
             ],
@@ -76,7 +78,8 @@
                     "yearly2": {
                         "currency": "USD",
                         "basePrice": 3.19,
-                        "discount": 61
+                        "discount": 61,
+                        "bonus": "+3 EXTRA mounths"
                     }
                 }
             ],
