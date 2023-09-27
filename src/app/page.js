@@ -15,6 +15,7 @@ export default function Home() {
   const [advancedFeatures, setAdvancedFeatures] = useState([]);
   const [standartFeatures, setStandartFeatures] = useState([]);
   const [basicFeatures, setBasicFeatures] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     let monthlyPrices = [];
@@ -37,6 +38,7 @@ export default function Home() {
     setmonthlyPrice(monthlyPrices);
     setyearlyPrice(yearlyPrices);
     setyearly2Price(yearly2Prices);
+    setIsLoading(false)
   }, []);
 
   useEffect(() => {
@@ -87,7 +89,7 @@ export default function Home() {
             </Button>
           </div>
           <div class="flex justify-center space-between">
-            <Table
+            {isLoading ? "" : <Table
               data={
                 button1 === true
                   ? yearly2Price
@@ -97,7 +99,8 @@ export default function Home() {
                   ? monthlyPrice
                   : yearly2Price
               }
-            ></Table>
+            ></Table>}
+            
           </div>
         </div>
       </div>
