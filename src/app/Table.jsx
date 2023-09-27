@@ -1,15 +1,16 @@
 import React from "react";
 import { TableButton } from "./TableButton";
 import { MoneySVG } from "./MoneySVG";
+import TableBody from "./TableBody";
 
 export const Table = ({ data, ...restProps }) => {
   return (
-    <table class="border-separate border-spacing-0 table-fixed z-0 relative h-1 mt-14">
+    <table class="border-separate rounded-lg border-spacing-0 table-fixed z-0 relative h-1 mt-14">
       <thead>
         <tr>
           <th class="w-[292px]"></th>
           <th class="w-[292px]"></th>
-          <th class="bg-[#3E5FFF] rounded-t-lg w-[292px] border-x-4 border-[#3E5FFF]">
+          <th class="bg-[#3E5FFF] rounded-t-[12px] w-[292px] border-x-4 border-collapse border-[#3E5FFF]">
             <p class="text-white body-xs-medium py-2 text-center font-medium text-[0.75rem]/[1.5rem]">
               Most popular
             </p>
@@ -69,7 +70,7 @@ export const Table = ({ data, ...restProps }) => {
         <tr>
           <td></td>
           {Object.entries(data).map(([id, val], idx) => {
-            let tdClass = "border-r-2 border-l-2";
+            let tdClass = "border-r-2 border-l-2 ";
             if ((idx + 1) % 2 === 0) {
               tdClass = " border-l-[#3E5FFF] border-r-[#3E5FFF] border-x-4";
             }
@@ -121,22 +122,40 @@ export const Table = ({ data, ...restProps }) => {
             <button class="border-[1px] rounded-full border-[#3e5fff] pt-[11px] pb-[11px] pl-[1.75rem] pr-[1.75rem] mb-4 w-[241px] hover:bg-[#3e5fff] hover:text-white text-base font-medium text-[#3e5fff]">
               Get Advanced
             </button>
-            <p class="text-center font-medium text-[#6c6d75] text-[0.75rem]/[1.5rem]"><MoneySVG/>30-day money-back guarantee</p>
+            <p class="text-center font-medium text-[#6c6d75] text-[0.75rem]/[1.5rem]">
+              <MoneySVG />
+              30-day money-back guarantee
+            </p>
           </td>
           <td class="text-center pt-6 border-l-[#3E5FFF] border-r-[#3E5FFF] border-x-4 border-b-2 pb-[0.75rem]">
-          <button class="border-[1px] rounded-full bg-[#3e5fff] text-white border-[#3e5fff] pt-[11px] pb-[11px] pl-[1.75rem] pr-[1.75rem] mb-4 w-[241px] hover:bg-[#6B90FA] hover:border-[#6B90FA] text-base font-medium">
+            <button class="border-[1px] rounded-full bg-[#3e5fff] text-white border-[#3e5fff] pt-[11px] pb-[11px] pl-[1.75rem] pr-[1.75rem] mb-4 w-[241px] hover:bg-[#6B90FA] hover:border-[#6B90FA] text-base font-medium">
               Get Standart
             </button>
-            <p class="text-center font-medium text-[#6c6d75] text-[0.75rem]/[1.5rem]"><MoneySVG/>30-day money-back guarantee</p>
+            <p class="text-center font-medium text-[#6c6d75] text-[0.75rem]/[1.5rem]">
+              <MoneySVG />
+              30-day money-back guarantee
+            </p>
           </td>
           <td class="text-center pt-6 border-r-2 border-l-2 border-b-2 pb-[0.75rem]">
-          <button class="border-[1px] rounded-full border-[#3e5fff] pt-[11px] pb-[11px] pl-[1.75rem] pr-[1.75rem] mb-4 w-[241px] hover:bg-[#3e5fff] hover:text-white text-base font-medium text-[#3e5fff]">
+            <button class="border-[1px] rounded-full border-[#3e5fff] pt-[11px] pb-[11px] pl-[1.75rem] pr-[1.75rem] mb-4 w-[241px] hover:bg-[#3e5fff] hover:text-white text-base font-medium text-[#3e5fff]">
               Get Basic
             </button>
-            <p class="text-center font-medium text-[#6c6d75] text-[0.75rem]/[1.5rem] "><MoneySVG/>30-day money-back guarantee</p>
+            <p class="text-center font-medium text-[#6c6d75] text-[0.75rem]/[1.5rem] ">
+              <MoneySVG />
+              30-day money-back guarantee
+            </p>
           </td>
         </tr>
       </thead>
+      <TableBody></TableBody>
+      <tfoot>
+        <tr>
+          <td></td>
+          <td></td>
+          <td class='border-x-4 h-[10px] border-x-[#3E5FFF] border-b-[4px] border-b-[#3E5FFF] rounded-bl-lg rounded-br-lg'></td>
+          <td></td>
+        </tr>
+      </tfoot>
     </table>
   );
 };
